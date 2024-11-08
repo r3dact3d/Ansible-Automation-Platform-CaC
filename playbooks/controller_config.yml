@@ -4,6 +4,7 @@
   connection: local
   gather_facts: false
   collections:
+    - awx.awx
     - infra.aap_configuration
   
   roles:
