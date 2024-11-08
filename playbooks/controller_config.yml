@@ -6,7 +6,5 @@
   collections:
     - infra.aap_configuration
   
-  tasks:
-    - name: Add Execution Environments
-      include_role:
-        name: infra.aap_configuration.execution_environments
+  roles:
+    - {role: infra.aap_configuration.organizations, when: aap_organizations is defined}
