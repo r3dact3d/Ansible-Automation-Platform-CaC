@@ -2,7 +2,8 @@
 - name: Add Execution Environments to controller
   hosts: localhost
   connection: local
-  gather_facts: false
+  vars:
+    aap_validate_certs: false
   collections:
     - awx.awx
     - infra.aap_configuration
