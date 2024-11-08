@@ -1,4 +1,4 @@
 ---
 collections:
-  - name: ansible.controller
+  - name: awx.awx
   - name: infra.aap_configuration
