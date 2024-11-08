@@ -1,0 +1,12 @@
+---
+- name: Add Execution Environments to controller
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  collections:
+    - infra.aap_configuration
+  
+  tasks:
+    - name: Add Execution Environments
+      include_role:
+        name: infra.aap_configuration.execution_environments
