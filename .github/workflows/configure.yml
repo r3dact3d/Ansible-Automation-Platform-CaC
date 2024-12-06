@@ -22,5 +22,5 @@ jobs:
         run: |
           ansible-galaxy collection install --pre -r collections/requirements.yml
           ansible-playbook infra.aap_configuration.configure_aap.yml -i inventory.yml \
-            -e "ansible_python_interpreter=$(which python3) aap_username=admin aap_password=${{ secrets.CONTROLLER_PASSWORD }} aap_configs_dir=platform_configs env=dev"
+            -e "ansible_python_interpreter=$(which python3) aap_username=admin aap_password=${{ secrets.CONTROLLER_PASSWORD }} aap_configs_dir=../platform_configs env=dev"
 
