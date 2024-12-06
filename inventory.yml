@@ -3,13 +3,6 @@ all:
   children:
     automationcontroller:
       hosts:
-        HOST_HERE:
+        ec2-3-144-107-119.us-east-2.compute.amazonaws.com:
 
-    automationhub:
-      hosts:
-        HOST_HERE:
-
-    builder:
-      hosts:
-        VSCODE_HOST:
 ...

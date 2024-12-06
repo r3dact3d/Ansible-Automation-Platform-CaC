@@ -1,0 +1,2 @@
+---
+aap_hostname: "{{ aap_hostname | default(groups['automationcontroller'][0]) }}"
