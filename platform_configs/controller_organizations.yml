@@ -1,9 +1,0 @@
----
-aap_organizations:
-- name: Default
-  description: This is the Default Group
-- name: Automation Group
-  description: This is the Automation Group
-  max_hosts: 10
-- name: Network Operations
-  description: This is the Network Operations 
