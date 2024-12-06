@@ -1,6 +1,6 @@
 ---
 - name: Add Execution Environments to controller
-  hosts: localhost
+  hosts: all
   connection: local
   vars:
     aap_validate_certs: false
