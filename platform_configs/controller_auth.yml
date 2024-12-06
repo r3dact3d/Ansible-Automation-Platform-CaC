@@ -1,2 +1,2 @@
 ---
-aap_hostname: "{{ aap_hostname | default(groups['automationcontroller'][0]) }}"
+aap_hostname: ec2-3-144-107-119.us-east-2.compute.amazonaws.com
