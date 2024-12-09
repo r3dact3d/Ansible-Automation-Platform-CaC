@@ -11,7 +11,7 @@
   pre_tasks:
     - name: Include vars from platform_configs directory
       ansible.builtin.include_vars:
-        dir: ../platform_configs
+        dir: ./controller_configs
         ignore_files: [controller_config.yml.template]
         extensions: ["yml"]
 
