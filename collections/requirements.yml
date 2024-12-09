@@ -4,7 +4,6 @@ collections:
   - name: ansible.hub
   - name: ansible.eda
   - name: infra.aap_configuration
-  - name: infra.aap_configuration_extended
   - name: ansible.controller
     version: 4.6.3 # Get from /api/v2/ X-API-Product-Version
     source: https://console.redhat.com/api/automation-hub/content/published/
