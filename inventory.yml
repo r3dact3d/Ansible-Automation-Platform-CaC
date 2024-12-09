@@ -3,6 +3,6 @@ all:
   children:
     automationcontroller:
       hosts:
-        ec2-3-144-107-119.us-east-2.compute.amazonaws.com:
+        ec2-18-119-116-63.us-east-2.compute.amazonaws.com:
 
 ...
