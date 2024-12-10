@@ -1,70 +1,63 @@
-= Private-Automation-Hub-CaC
+= AnsibleProject
 
-https://aap2.demoredhat.com/exercises/ansible_config_as_code/
+== Organize Your Repository
 
-== Setup
+Setup dedicated repository for your ansible projects, which includes playbooks, roles, and inventories. You might want to have a structure like this:
 
-. Create GitHub Repo
-
-.secrets
-[source, yaml]
+.Directory Structure
+[source,shell]
 ----
----
-vault_pass: 'the password to decrypt this vault'
-machine_pass: 'password for root user on hub'
-controller_pass: 'account pass for controller'
-ah_pass: 'hub admin account pass'
-controller_api_user_pass: 'this will create and use this password can be generated'
-ah_token_password: 'this will create and use this password can be generated'
-student_account: 'this is the account under Git Access on your workbench information page, example: student2'
-...
+.
+├── .github/workflows
+├── collections
+│   └── requirements.txt
+├── group_vars
+│   ├── all
+│   ├── controller
+│   ├── pah
+│   └── eda
+├── inventory.yml
+└── controller_config.yml
 ----
 
-https://www.redhat.com/sysadmin/get-started-private-automation-hub
+This allows you to separate controller configurations for different environment life-cycles.
 
-.survey
-[source, json]
-----
-{
-    "name": "Basic Survey",
-    "description": "Basic Survey",
-    "spec": [
-      {
-        "question_description": "Name",
-        "min": 0,
-        "default": "",
-        "max": 128,
-        "required": true,
-        "choices": "",
-        "new_question": true,
-        "variable": "basic_name",
-        "question_name": "Basic Name",
-        "type": "text"
-      },
-      {
-        "question_description": "Choosing yes or no.",
-        "min": 0,
-        "default": "yes",
-        "max": 0,
-        "required": true,
-        "choices": "yes\nno",
-        "new_question": true,
-        "variable": "option_true_false",
-        "question_name": "Choose yes or no?",
-        "type": "multiplechoice"
-      },
-      {
-        "question_description": "",
-        "min": 0,
-        "default": "",
-        "max": 0,
-        "required": true,
-        "choices": "group1\ngroup2\ngroup3",
-        "new_question": true,
-        "variable": "target_groups",
-        "question_name": "Select Group:",
-        "type": "multiselect"
-      }
-    ]
-  }
-----
+== Ansible Automation Platform
+
+This is just the specs for my lab and really the minimum requirements to highlight Ansible Controller as Code.
+
+
+== Workflow
+
+This repo currently offers a playbook that will configure Ansible controllers based on variables defined in group_vars and/or configs directory.
+
+=== There are two parts:
+
+. Seed the required objects to support Controller as Code
+.. Located in the configs/directory are the configs to configure credential, project, and template to keep Controller as Code in sync
+. Continuous configuration as code
+.. Keeps Ansible controllers in sync with code via template webhook
+
+=== Before Seeding Controller as Code:
+
+. Ensure inventory.yml has YOUR Ansible Controller host(s) defined
+. Create a GitHub repository secret that is passed during workflow
+.. name expected is CONTROLLER_PASSWORD
+.. secret should be the password used to login to the controller GUI
+
+
+image::https://github.com/r3dact3d/Ansible-Controller-as-Code/actions/workflows/seed-cac-workflow.yml/badge.svg[link="https://github.com/r3dact3d/Ansible-Controller-as-Code/actions/workflows/seed-cac-workflow.yml"]
+
+NOTE: You can now check the Actions to watch/check the status of the deployment.
+
+=== Completing the sync webhook
+
+. Manual task currently to get webhook url and token from the Job Template in the controller UI
+
+
+== Function
+
+This will create admin credential, and a project with template to get stats from the controller.  To highlight the syncing ability from Git to Controller.
+
+    link:https://github.com/redhat-cop/controller_configuration.git
+#v1-2
