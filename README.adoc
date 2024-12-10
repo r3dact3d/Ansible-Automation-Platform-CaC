@@ -49,7 +49,7 @@ This repo currently offers a playbook that will configure Ansible controllers ba
 image::/images/GitHubRepoSecrets.png[]
 
 
-image::https://github.com/r3dact3d/Ansible-Controller-as-Code/actions/workflows/seed-cac-workflow.yml/badge.svg[link="https://github.com/r3dact3d/Ansible-Controller-as-Code/actions/workflows/seed-cac-workflow.yml"]
+image::https://github.com/r3dact3d/Ansible-Automation-Platform-CaC/actions/workflows/configure.yml/badge.svg[link="https://github.com/r3dact3d/Ansible-Automation-Platform-CaC/actions/workflows/configure.yml"]
 
 NOTE: You can now check the Actions to watch/check the status of the deployment.
 
@@ -62,5 +62,4 @@ NOTE: You can now check the Actions to watch/check the status of the deployment.
 
 This will create admin credential, and a project with template to get stats from the controller.  To highlight the syncing ability from Git to Controller.
 
-    link:https://github.com/redhat-cop/controller_configuration.git
-#v1-2
+https://github.com/redhat-cop/infra.aap_configuration[Red Hat Validated Collection infra.aap_configuration]
