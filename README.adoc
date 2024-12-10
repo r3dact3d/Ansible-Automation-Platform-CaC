@@ -42,8 +42,11 @@ This repo currently offers a playbook that will configure Ansible controllers ba
 
 . Ensure inventory.yml has YOUR Ansible Controller host(s) defined
 . Create a GitHub repository secret that is passed during workflow
-.. name expected is CONTROLLER_PASSWORD
-.. secret should be the password used to login to the controller GUI
+.. CONTROLLER_PASSWORD = *secret should be the Admin password used to login to the controller GUI*
+.. TOKEN = https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.1/html/getting_started_with_automation_hub/proc-create-api-token#proc-create-api-token[*RH API Token*]
+
+
+image::/images/GitHubRepoSecrets.png[]
 
 
 image::https://github.com/r3dact3d/Ansible-Controller-as-Code/actions/workflows/seed-cac-workflow.yml/badge.svg[link="https://github.com/r3dact3d/Ansible-Controller-as-Code/actions/workflows/seed-cac-workflow.yml"]
