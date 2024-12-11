@@ -1,0 +1,29 @@
+---
+aap_teams:
+  - name: prod-hr-team-admins
+    organization: Prod-HR-CaaC
+  - name: prod-hr-team-operators
+    organization: Prod-HR-CaaC
+  - name: prod-it-team-admins
+    organization: Prod-IT-CaaC
+  - name: prod-it-team-operators
+    organization: Prod-IT-CaaC
+  - name: DevOps
+    description: Development Operations Team
+    organization: Dev
+  - name: NetOps
+    description: Network Operations Team
+    organization: Dev
+  - name: SysOps
+    description: Platform Operations Team
+    organization: Dev
+  - name: OpServ
+    description: Operational Services Team
+    organization: Dev
+  - name: Release
+    description: Release Team
+    organization: Dev
+  - name: Integrations
+    description: Services Integration Team
+    organization: Dev
+...
