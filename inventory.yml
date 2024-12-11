@@ -3,6 +3,6 @@ all:
   children:
     automationcontroller:
       hosts:
-        aap-aap.apps.cluster-jxnkk-1.dynamic.redhatworkshops.io:
+        ec2-3-17-110-19.us-east-2.compute.amazonaws.com:
 
 ...
