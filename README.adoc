@@ -11,7 +11,7 @@ Setup dedicated repository for your ansible projects, which includes playbooks, 
 ├── .github/workflows
 ├── collections
 │   └── requirements.txt
-├── group_vars
+├── controller_configs
 │   ├── all
 │   ├── controller
 │   ├── pah
