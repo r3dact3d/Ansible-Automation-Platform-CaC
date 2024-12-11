@@ -2,40 +2,40 @@
 platform_state: exists
 users_default_password: changeme
 aap_user_accounts:
-  - user: dev_user1
+  - username: dev_user1
     email: dev_user1@dev.com
     organization: Dev
-  - user: dev_user2
+  - username: dev_user2
     email: dev_user2@dev.com
     organization: Dev
-  - user: net_user1
+  - username: net_user1
     email: net_user1@dev.com
     organization: Dev
-  - user: net_user2
+  - username: net_user2
     email: net_user2@dev.com
     organization: Dev
-  - user: sys_user1
+  - username: sys_user1
     email: sys_user1@dev.com
     organization: Dev
-  - user: sys_user2
+  - username: sys_user2
     email: sys_user2@dev.com
     organization: Dev
-  - user: ops_user1
+  - username: ops_user1
     email: ops_user1@dev.com
     organization: Dev
-  - user: ops_user2
+  - username: ops_user2
     email: ops_user2@dev.com
     organization: Dev
-  - user: rel_user1
+  - username: rel_user1
     email: dev_user1@dev.com
     organization: Dev
-  - user: spec_user2
+  - username: spec_user2
     email: spec_user2@dev.com
     organization: Dev
-  - user: spec_user3
+  - username: spec_user3
     email: spec_user3@dev.com
     organization: Dev
-  - user: spec_user4
+  - username: spec_user4
     email: spec_user4@dev.com
     organization: Dev
 ...
