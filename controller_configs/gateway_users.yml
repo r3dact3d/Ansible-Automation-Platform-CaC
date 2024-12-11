@@ -1,4 +1,6 @@
 ---
+platform_state: exists
+users_default_password: changeme
 aap_user_accounts:
   - user: dev_user1
     email: dev_user1@dev.com
