@@ -5,9 +5,7 @@ aap_organizations:
 
   - name: Prod-HR-CaaC
     description: Configuration as Code - Prod-HR-CaaC
-    custom_virtualenv: []
 
   - name: Prod-IT-CaaC
     description: Configuration as Code - Prod-IT-CaaC
-    custom_virtualenv: []
 ...
