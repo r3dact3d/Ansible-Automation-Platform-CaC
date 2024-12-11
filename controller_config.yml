@@ -19,8 +19,8 @@
 
   roles:
     - {role: infra.aap_configuration.gateway_organizations, when: aap_organizations is defined}
-    - {role: infra.aap_configuration.controller_teams, when: aap_teams is defined}
-#    - {role: infra.aap_configuration.controller_users, when: aap_user_accounts is defined}
+    - {role: infra.aap_configuration.gateway_teams, when: aap_teams is defined}
+    - {role: infra.aap_configuration.controller_users, when: aap_user_accounts is defined}
     - {role: infra.aap_configuration.controller_credential_types, when: controller_credential_types is defined}
     - {role: infra.aap_configuration.controller_credentials, when: controller_credentials is defined}
 
