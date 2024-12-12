@@ -6,9 +6,10 @@
     aap_validate_certs: false
   collections:
     - awx.awx
-    - infra.aap_configuration
-    - ansible.controller
     - ansible.platform
+    - ansible.controller
+    - infra.aap_configuration
+
 
   pre_tasks:
     - name: Include vars from controller_configs directory
