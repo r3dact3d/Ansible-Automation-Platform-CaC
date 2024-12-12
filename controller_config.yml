@@ -7,7 +7,6 @@
   collections:
     - awx.awx
     - ansible.platform
-    - ansible.controller
     - infra.aap_configuration
 
 
