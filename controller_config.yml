@@ -10,18 +10,15 @@
     - infra.aap_configuration
 
 
-  pre_tasks:
+  tasks:
     - name: Include vars from controller_configs directory
       ansible.builtin.include_vars:
         dir: ./controller_configs
         ignore_files: [controller_config.yml.template]
         extensions: ["yml"]
 
-  roles:
-    - {role: controller_organizations, when: aap_organizations is defined}
-#    - {role: infra.aap_configuration.gateway_teams, when: teams is defined}
-#    - {role: infra.aap_configuration.gateway_users, when: aap_user_accounts is defined}
-#    - {role: infra.aap_configuration.controller_credential_types, when: controller_credential_types is defined}
-#    - {role: infra.aap_configuration.controller_credentials, when: controller_credentials is defined}
 
-    
+    - name: Call dispatch role
+      ansible.builtin.include_role:
+        name: infra.aap_configuration.dispatch
+...
