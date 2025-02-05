@@ -3,7 +3,10 @@
   hosts: localhost
   connection: local
   vars:
-    aap_validate_certs: false
+    aap_hostname: "{{ lookup('env', 'CONTROLLER_HOST') }}"
+    aap_validate_certs: "{{ lookup('env', 'CONTROLLER_VERIFY_SSL') | default(false) | bool }}"
+    aap_username: "{{ lookup('env', 'CONTROLLER_USERNAME') }}"
+    aap_password: "{{ lookup('env', 'CONTROLLER_PASSWORD') }}"
   collections:
     - awx.awx
     - ansible.platform
