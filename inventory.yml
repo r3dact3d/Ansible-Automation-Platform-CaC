@@ -1,8 +1,0 @@
----
-all:
-  children:
-    automationcontroller:
-      hosts:
-        ec2-3-17-110-19.us-east-2.compute.amazonaws.com:
-
-...

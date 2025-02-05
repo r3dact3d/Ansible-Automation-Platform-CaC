@@ -1,6 +1,6 @@
 ---
 - name: Add Execution Environments to controller
-  hosts: all
+  hosts: localhost
   connection: local
   vars:
     aap_validate_certs: false
@@ -17,8 +17,19 @@
         ignore_files: [controller_config.yml.template]
         extensions: ["yml"]
 
-
-    - name: Call dispatch role
+    - name: Add organization
       ansible.builtin.include_role:
-        name: infra.aap_configuration.dispatch
+        name: infra.aap_configuration.gateway_organizations
+
+    - name: Add teams
+      ansible.builtin.include_role:
+        name: infra.aap_configuration.gateway_teams
+
+    - name: Call gateway authenticator role
+      ansible.builtin.include_role:
+        name: infra.aap_configuration.gateway_authenticator
+
+    - name: Call gateway authenticator maps role
+      ansible.builtin.include_role:
+        name: infra.aap_configuration.gateway_authenticator_maps
 ...
