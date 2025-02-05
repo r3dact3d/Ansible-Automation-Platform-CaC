@@ -22,7 +22,7 @@
 
     - name: Add organization
       ansible.builtin.include_role:
-        name: infra.aap_configuration.aap_organizations
+        name: infra.aap_configuration.organizations
 
     - name: Add teams
       ansible.builtin.include_role:
