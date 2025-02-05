@@ -22,15 +22,19 @@
 
     - name: Add organization
       ansible.builtin.include_role:
-        name: infra.aap_configuration.gateway_organizations
+        name: infra.aap_configuration.aap_organizations
 
     - name: Add teams
       ansible.builtin.include_role:
-        name: infra.aap_configuration.gateway_teams
+        name: infra.aap_configuration.teams
+
+    - name: Add users
+      ansible.builtin.include_role:
+        name: infra.aap_configuration.users
 
     - name: Call gateway authenticator role
       ansible.builtin.include_role:
-        name: infra.aap_configuration.gateway_authenticator
+        name: infra.aap_configuration.authenticators
 
     - name: Call gateway authenticator maps role
       ansible.builtin.include_role:
