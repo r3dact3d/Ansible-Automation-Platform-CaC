@@ -7,8 +7,6 @@
     aap_username: "{{ lookup('env', 'CONTROLLER_USERNAME') }}"
     aap_password: "{{ lookup('env', 'CONTROLLER_PASSWORD') }}"
   collections:
-    - awx.awx
-    - ansible.platform
     - infra.aap_configuration
 
 
@@ -31,11 +29,4 @@
       ansible.builtin.include_role:
         name: infra.aap_configuration.gateway_users
 
-    - name: Call gateway authenticator role
-      ansible.builtin.include_role:
-        name: infra.aap_configuration.authenticators
-
-    - name: Call gateway authenticator maps role
-      ansible.builtin.include_role:
-        name: infra.aap_configuration.gateway_authenticator_maps
 ...
