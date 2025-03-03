@@ -1,7 +1,7 @@
 ---
 - name: Add Execution Environments to controller
   hosts: localhost
-  connection: local
+
   vars:
     aap_hostname: "{{ lookup('env', 'CONTROLLER_HOST') }}"
     aap_validate_certs: "{{ lookup('env', 'CONTROLLER_VERIFY_SSL') | default(false) | bool }}"
