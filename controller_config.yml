@@ -19,14 +19,14 @@
 
     - name: Add organization
       ansible.builtin.include_role:
-        name: infra.aap_configuration._organizations
+        name: infra.aap_configuration.controller_organizations
 
     - name: Add teams
       ansible.builtin.include_role:
-        name: infra.aap_configuration.gateway_teams
+        name: infra.aap_configuration.controller_teams
 
     - name: Add users
       ansible.builtin.include_role:
-        name: infra.aap_configuration.gateway_users
+        name: infra.aap_configuration.controller_users
 
 ...
