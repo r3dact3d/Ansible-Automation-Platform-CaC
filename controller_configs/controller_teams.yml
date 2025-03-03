@@ -1,5 +1,5 @@
 ---
-aap_teams:
+controller_teams:
   - name: prod-hr-team-admins
     organization: Prod-HR-CaaC
   - name: prod-hr-team-operators

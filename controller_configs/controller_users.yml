@@ -1,7 +1,7 @@
 ---
 platform_state: exists
 users_default_password: changeme
-aap_user_accounts:
+controller_user_accounts:
   - username: dev_user1
     email: dev_user1@dev.com
     organization: Dev
