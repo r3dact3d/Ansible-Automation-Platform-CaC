@@ -35,9 +35,5 @@ controller_templates:
     execution_environment: terraform-ee-base
     extra_vars: ''
     use_fact_cache: yes
-  - name: RHEL Update
-    job_type: run
-    inventory: Demo Inventory
-    project: Terraform Infra
-    playbook: rhel_update.yml
+
 ...
