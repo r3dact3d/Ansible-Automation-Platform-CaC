@@ -1,0 +1,43 @@
+---
+controller_templates:
+  - name: Get Stats JT
+    credentials:
+      - AAP Admin
+    job_type: run
+    inventory: dev_inventory
+    project: Get Controller Stats
+    playbook: getControllerStats.yml
+    ask_variables_on_launch: true
+    extra_vars:
+      controller_hostname:
+      controller_password:
+
+  - name: Get Sys Data
+    job_type: run
+    inventory: dev_inventory
+    project: Use Cases
+    playbook: Dynamic Inventory in Ansible Automation Platform/get_sys_data.yml
+
+
+  - name: Terraform Init and Plan
+    job_type: run
+    inventory: Controller Inventory
+    project: Urban Terraform
+    playbook: playbooks/tf_init_plan.yml
+    execution_environment: terraform-ee-base
+    use_fact_cache: yes
+    extra_vars: ''
+  - name: Terraform Load and Apply
+    job_type: run
+    inventory: Controller Inventory
+    project: Urban Terraform
+    playbook: playbooks/tf_apply_plan.yml
+    execution_environment: terraform-ee-base
+    extra_vars: ''
+    use_fact_cache: yes
+  - name: RHEL Update
+    job_type: run
+    inventory: dev_inventory
+    project: Terraform Infra
+    playbook: rhel_update.yml
+...
