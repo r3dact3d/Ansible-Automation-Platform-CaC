@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Pass token securely
         run: |
-          perl -pi -e 's/tokenish/${{ secrets.TOKEN }}/' ansible.cfg
+          perl -pi -e 's/tokenish/${{ secrets.TOKEN }}/g' ansible.cfg
 
       - name: Install Python Dependencies
         run: |
