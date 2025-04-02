@@ -3,4 +3,4 @@ all:
   children:
     dev:
       hosts:
-        rh-aap.blinker19.com:
+        ec2-3-144-23-114.us-east-2.compute.amazonaws.com:
