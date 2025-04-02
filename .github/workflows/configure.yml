@@ -26,14 +26,14 @@ jobs:
         if: steps.check_sshkey.is_key_defined == 'true'
         run: |
           perl -pi -e 's/priv_key/${{ secrets.SSH_KEY }}/g' cloud_keys
-          chmod '0600' cloud_keys
-
+          
       - name: Install Python Dependencies
         run: |
           if [ -f requirements.txt ]; then pip3 install -r requirements.txt; fi
 
       - name: Run ansible playbook
         run: |
+          chmod '0600' cloud_keys
           ansible-galaxy collection install --pre -r collections/requirements.yml
           ansible-playbook configure_aap.yml -i inventory.yml \
             -e "ansible_python_interpreter=$(which python3) aap_username=admin aap_password=${{ secrets.CONTROLLER_PASSWORD }} aap_configs_dir=/home/runner/work/Ansible-Automation-Platform-CaC/Ansible-Automation-Platform-CaC/controller_configs env=dev" 
