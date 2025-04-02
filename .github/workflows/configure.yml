@@ -26,7 +26,7 @@ jobs:
         if: steps.check_sshkey.is_key_defined == 'true'
         run: |
           perl -pi -e 's/priv_key/${{ secrets.SSH_KEY }}/g' cloud_keys
-          chmod 0644 cloud_keys
+          chmod 0600 cloud_keys
 
       - name: Install Python Dependencies
         run: |
