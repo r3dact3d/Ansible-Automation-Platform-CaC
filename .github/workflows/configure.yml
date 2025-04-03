@@ -20,12 +20,12 @@ jobs:
       - name: Check if SSH_KEY is defined
         id: check_sshkey
         run: |
-          echo "is_key_defined=$(if [ \"${{ secrets.SSH_KEY }}\" ]; then echo true; else echo false; fi)" >> $GITHUB_OUTPUT
+          echo "is_key_defined=$(if [ ${{ secrets.SSH_KEY }} ]; then echo true; else echo false; fi)" >> $GITHUB_OUTPUT
 
       - name: Pass token securely
 #        if: steps.check_sshkey.is_key_defined == 'true'
         run: |
-          echo priv_key > cloud_keys
+          echo 'priv_key' > cloud_keys
           perl -pi -e 's/priv_key/${{ secrets.SSH_KEY }}/g' cloud_keys
           cat cloud_keys
           
