@@ -19,7 +19,8 @@ jobs:
 
       - name: Pass token securely
         run: |
-          perl -pi -e 's/priv_key/${{ secrets.SSH_KEY }}/g' cloud_keys
+          #perl -pi -e 's/priv_key/${{ secrets.SSH_KEY }}/g' cloud_keys
+          echo "${{ secrets.SSH_KEY }}" > cloud_keys
           
       - name: Install Python Dependencies
         run: |
