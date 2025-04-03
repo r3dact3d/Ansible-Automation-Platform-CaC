@@ -1,0 +1,2 @@
+---
+controller_hostname: "{{ controller_host | default(groups['dev'][0]) }}"
