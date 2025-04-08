@@ -13,7 +13,7 @@
     - name: Include vars from configs directory
       ansible.builtin.include_vars:
         dir: ./controller_configs
-        ignore_files: [controller_config.yml.template]
+        ignore_files: [credentials.yml]
         extensions: ["yml"]
       tags:
         - always
