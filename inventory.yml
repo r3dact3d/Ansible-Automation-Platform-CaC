@@ -3,8 +3,8 @@ all:
   children:
     dev:
       hosts:
-        ec2-3-144-23-114.us-east-2.compute.amazonaws.com:
-          ansible_host: ec2-3-144-23-114.us-east-2.compute.amazonaws.com
+        3.84.77.179:
+          ansible_host: 3.84.77.179
           ansible_ssh_user: ec2-user
           ansible_private_key_file: cloud_keys
 
