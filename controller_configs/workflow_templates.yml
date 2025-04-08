@@ -15,7 +15,7 @@ controller_workflows:
     ask_limit_on_launch: false
     webhook_service: ''
     webhook_credential:
-    organization: Default
+    organization: r3dact3d
     schedules: []
     simplified_workflow_nodes:
       - all_parents_must_converge: false
