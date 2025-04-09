@@ -1,31 +1,31 @@
 ---
 controller_projects:
   - name: Urban Terraform
-    organization: r3dact3d
+    organization: Default
     scm_branch: main
     scm_clean: 'no'
     scm_delete_on_update: 'no'
     scm_type: git
     scm_update_on_launch: 'yes'
-    scm_url: https://github.com/r3dact3d/urban-terraform.git
+    scm_url: https://github.com/Default/urban-terraform.git
   - name: Get Controller Stats
-    organization: r3dact3d
+    organization: Default
     scm_branch: main
     scm_clean: 'no'
     scm_delete_on_update: 'no'
     scm_type: git
     scm_update_on_launch: 'no'
-    scm_url: https://github.com/r3dact3d/ansiblePlays.git
+    scm_url: https://github.com/Default/ansiblePlays.git
   - name: Blinker Project
-    organization: r3dact3d
+    organization: Default
     scm_branch: development
     scm_clean: 'no'
     scm_delete_on_update: 'no'
     scm_type: git
     scm_update_on_launch: 'no'
-    scm_url: https://github.com/r3dact3d/AnsibleProject.git
+    scm_url: https://github.com/Default/AnsibleProject.git
   - name: Use Cases
-    organization: r3dact3d
+    organization: Default
     scm_branch: main
     scm_clean: 'no'
     scm_delete_on_update: 'no'
