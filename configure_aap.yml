@@ -19,6 +19,15 @@
         extensions: ["yml"]
       tags:
         - always
+    
+    - name: Create a new token using controller username/password
+      awx.awx.token:
+        description: 'Creating token to test controller jobs'
+        scope: "write"
+        state: present
+        controller_host: "{{ aap_hostname }}"
+        aap_username: "{{ aap_username }}"
+        aap_password: "{{ aap_password }}"
 
     - name: Call dispatch role
       ansible.builtin.include_role:
