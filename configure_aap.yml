@@ -26,8 +26,8 @@
         scope: "write"
         state: present
         controller_host: "{{ aap_hostname }}"
-        aap_username: "{{ aap_username }}"
-        aap_password: "{{ aap_password }}"
+        controller_username: "{{ aap_username }}"
+        controller_password: "{{ aap_password }}"
 
     - name: Call dispatch role
       ansible.builtin.include_role:
