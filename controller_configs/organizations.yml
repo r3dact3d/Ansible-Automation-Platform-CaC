@@ -1,7 +1,7 @@
 ---
 aap_organizations:
-  - name: Dev
-    description: This is the Dev Group
+  - name: Default
+    description: This is the Default Group
 
   - name: Prod-HR-CaaC
     description: Configuration as Code - Prod-HR-CaaC
