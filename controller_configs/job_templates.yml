@@ -29,5 +29,13 @@ controller_templates:
     execution_environment: terraform-ee-base
     extra_vars: ''
     use_fact_cache: yes
+  
+  - name: EE Streamer
+    job_type: run
+    inventory: Demo Inventory
+    project: Ansible EE Builder Stream
+    playbook: ee_builder.yml
+    execution_environment: ee-aap-builder-stream
+    extra_vars: ''
 
 ...

@@ -1,7 +1,7 @@
 ---
 controller_execution_environments:
-  - name: "brady-ee-rhel8"
-    image: quay.io/brthomps/brady-ee-rhel8:latest
+  - name: "ee-aap-builder-stream"
+    image: quay.io/brthomps/ee-aap-ee-builder:latest
   - name: "network-ee-base"
     image: quay.io/brthomps/network-ee:latest
   - name: "terraform-ee-base"
